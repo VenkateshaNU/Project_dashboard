@@ -1,0 +1,284 @@
+.nav_bar
+{
+    width: 100%;
+    height: 40px;
+    background-color: black;
+}
+
+.bg_image
+{
+    background-image:linear-gradient(to bottom,rgba(128, 128, 128, 0.224),rgba(0, 0, 255, 0.646) ),url(Image/M-A-S-Employee-rights-min-1920x960.jpg) ;
+    width: 100%;
+    height: 700px;
+    background-repeat: no-repeat;
+    background-size: cover;
+    
+
+}
+.nav_items>ul
+{
+    display: flex;
+    list-style: none;
+    text-decoration: none;
+    gap: 100px;
+    position: relative;
+    left: 300px;
+    font-size: 25px;
+    bottom: 50px;
+    
+}
+
+ul>li>a
+{
+    text-decoration: none;
+    color: black;
+}
+
+.nav_brand
+{
+    font-size: 50px;
+    position: relative;
+    top: 20px;
+    left:50px ;
+}
+
+.word
+{
+    overflow-wrap: break-word;
+    width: 400px;
+    position: relative;
+    left: 200px;
+    font-size: 50px;
+    top: 50px;
+}
+.type
+{
+    overflow-wrap: break-word;
+    width: 400px;
+    position: relative;
+    left:200px ;
+    text-align: justify;
+    top: 50px;
+}
+.box
+{
+    height: 50px;
+    width: 10%;
+    background-color: blue;
+    border: non;
+    border-radius: 5px;
+     color: white;
+     text-align: center;
+     position: relative;
+     left: 200px;
+     top: 50px;
+     
+     
+}
+.box>p
+{
+position: relative;
+top: 15px;
+}
+
+button
+{
+    border: 50px;
+    border-color: black;
+    border-radius: 5px;
+    width: 10%; 
+    background-color:rgba(0, 0, 255, 0.302);
+    height: 50px;
+    position: relative;
+    left: 350px;
+    
+}
+
+section>h1
+{
+    text-align: center;
+    font-size:50px ;
+}
+
+.card
+{
+    background-color: ;
+    width: 30%;
+    height: 500px;
+}
+.card_container
+{
+    display: flex;
+    gap: 50px;
+    margin-left: 30px;
+}
+img
+{
+    width: 35%;
+    height: 120px;
+    position: relative;
+    left: 130px;
+    top: 30px;
+}
+.card>h1
+{
+    position: relative;
+    left: 80px;
+    top: 30px;
+}
+.card>p
+{
+    position: relative;
+    top: 20px;
+    text-align: center;
+}
+.box1
+{
+    width: 50%;
+    height: 50px;
+    background-color: rgb(15, 48, 109);
+    position: relative;
+    left: 80px;
+    top: 50px;
+    border: none;
+    border-radius: 10px;
+    text-align: center;
+    color: white;
+}
+.box1>p
+{
+font-size: 20px;
+position: relative;
+top: 10px;
+}
+
+section>h6
+{
+    font-size: 50px;
+    position: relative;
+    left: 500px;
+    
+}
+.card2
+{background-color: ;
+    width: 30%;
+    height: 500px;
+    position: relative;
+    left: 35px;
+    text-align: left;
+    
+}
+.container
+{
+    display: flex;
+    gap: 50px;
+    margin-left:30px;
+}
+
+.card2>kbb
+{
+    font-size: 30px;
+}
+
+.card2>span
+{
+    position: relative;
+    right: 80px;
+}
+
+.circle
+{
+    width: 20%;
+    height: 280px;
+    background-color:rgb(15, 48, 109);
+    border: none;
+    border-radius:2000px;
+    margin: 0;
+    
+    position: relative;
+    top: 200px;
+}
+
+.circle_container{
+    display: flex;
+    position: relative;
+    left: 300px;
+    gap: 200px;
+    
+}
+.circle
+{
+    
+}
+.circle_container>pre>p
+{
+  font-size: 30px;
+  position: relative;
+  bottom: 80px;
+  
+}
+span
+{
+    color:rgb(15, 48, 109) ;
+    font-size: 50px;
+    margin: 0;
+    
+    
+    
+}
+.circle2
+{
+    width: 100%;
+    height: 270px;
+    background-color: white;
+    border: none;
+    border-radius:2000px;
+    position: relative;
+    left: 50px;
+    bottom: 30px;
+    border-color: gray;
+    border:50px auto; 
+    box-shadow:3px 3px 3px 1px gray ;
+    text-align: center;
+}
+.circle2>h1
+{
+    position: relative;
+    top:25px;
+    font-size: 150px;
+    color:rgb(15, 48, 109) ;
+}
+.circle2>p
+{
+    position: relative;
+    font-size: 25px;
+    bottom: 80px;
+}
+.ca1
+{
+    width: 20%;
+    height: 60px;
+    background-color:rgb(15, 48, 109) ;
+    border: none;
+    border-radius:50px ;
+    position: relative;
+    bottom: 450px;
+    left: 320px;
+}
+.ca2
+{
+    width: 10%;
+    height: 30px;
+    background-color:rgb(15, 48, 109) ;
+    border: none;
+    border-radius:50px ;
+    position: relative;
+    bottom: 400px;
+    left: 335px;
+}
+
+
+body
+{
+    overflow-x: hidden;
+}
