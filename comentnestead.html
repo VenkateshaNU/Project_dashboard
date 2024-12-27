@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Nested Comment System</title>
+    <link rel="stylesheet" href="style.css" />
+    <style>
+        body {
+    font-family: "Arial", sans-serif;
+    background-color: #f9f9f9;
+    color: #333;
+    line-height: 1.6;
+    padding: 20px;
+  }
+   #commentForm textarea {
+    width: 100%;
+    max-width: 600px;
+    height: 100px;
+    margin-bottom: 10px;
+    padding: 10px;
+    box-sizing: border-box;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+    resize: vertical;
+  }
+   #commentForm button {
+    display: inline-block;
+    padding: 10px 20px;
+    background-color: #005a9c;
+    color: #ffffff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+  }
+   #commentForm button:hover {
+    background-color: #003d73;
+  }
+   .repliesContainer, .reply {
+    background-color: #ffffff;
+    margin: 10px 0;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    transition: box-shadow 0.3s;
+  }
+   .repliesContainer:hover, .reply:hover {
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+  }
+   .repliesContainer .replyBtn, .comment .toggleReplies {
+    margin-top: 10px;
+    background-color: #007bff;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    padding: 5px 10px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+  }
+   .repliesContainer .replyBtn:hover, .comment .toggleReplies:hover {
+    background-color: #0056b3;
+  }
+   .repliesContainer {
+    margin-top: 20px;
+  }
+   .replyInput {
+    width: 100%;
+    margin-top: 10px;
+    padding: 10px;
+    box-sizing: border-box;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+    resize: vertical;
+    display: none; /* Initially hide the reply input */
+  }
+   .repliesContainer:hover .replyInput {
+    display: block; /* Show reply input on comment hover */
+  }
+   .collapsed {
+    display: none;
+  }
+   .repliesContainer {
+    padding-left: 1rem;
+    border-left: 3px solid #eee;
+    margin-left:10%;
+  }
+    </style>
+  </head>
+  <body>
+    <div id="commentForm">
+      <textarea id="commentInput" placeholder="Write a comment ..."></textarea>
+      <button id="submitComment">Comment</button>
+    </div>
+    <div id="commentsContainer">
+      <!-- <div class="repliesContainer">
+           <p>Some Comment</p>
+           <button class="replyBtn">Reply</button>
+           <textArea class="replyInput" placeholder="Write a reply ..."></textArea>
+           <div class="repliesContainer">
+               <p>Some other Comment</p>
+               <button class="replyBtn">Reply</button>
+               <textArea class="replyInput" placeholder="Write a reply ..."></textArea>
+           </div>
+       </div>
+       <div class="repliesContainer">
+           <p>Some Comment</p>
+           <button class="replyBtn">Reply</button>
+           <textArea class="replyInput" placeholder="Write a reply ..."></textArea>
+       </div> -->
+    </div>
+    <script>
+        document.addEventListener("DOMContentLoaded", function () {
+  const submitBtn = document.querySelector("#submitComment");
+  const commentInput = document.querySelector("#commentInput");
+  const commentContainer = document.querySelector("#commentsContainer")
+
+  submitBtn.addEventListener("click", function () {
+    const commentText = commentInput.value;
+    addComment(commentText);
+  });
+
+  // event delegation for the commentContainer to make the reply btn work
+
+  commentContainer.addEventListener('click' , function(e){
+    if(e.target.className.includes('replyBtn')){
+        const parentComment = e.target.parentElement
+        const replyInput = parentComment.querySelector('.replyInput')
+        const replyText = replyInput.value
+        addReply(parentComment , replyText)
+    }
+  })
+
+  function addComment(text) {
+    const commentElement = document.createElement("div");
+
+    commentElement.className = "repliesContainer";
+
+    commentElement.innerHTML = `<p>${text}</p>
+        <button class="replyBtn">Reply</button>
+        <textArea class="replyInput" placeholder="Write a reply ..."></textArea>`;
+    commentContainer.appendChild(commentElement)  
+  }
+
+
+  function addReply(parentComment , text){
+     const replyElement = document.createElement('div')
+
+     replyElement.className = 'repliesContainer'
+
+     replyElement.innerHTML = `<p>${text}</p>`
+
+     parentComment.appendChild(replyElement)
+  }
+
+
+});
+    </script>
+  </body>
+</html>

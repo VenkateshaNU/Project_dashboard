@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+</body>
+
+<script>
+    const Person1={
+        Name:'Venki',
+        Age:25,
+
+        PrintNameandAge:function(location,occupation){
+      console.log(`I am ${this.Name} and ${this.Age} years old location ${location} and accupation is ${occupation}`)
+    }
+    }
+
+   
+
+   Person1.PrintNameandAge('mumbai','Developer')
+
+   const Person2={
+        Name:'Vivek',
+        Age:30,
+
+      
+    }
+
+    Person1.PrintNameandAge.call(Person2,'Karnataka','Developer')    
+
+
+</script>
+</html>
