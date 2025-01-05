@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .card {
+            height: 200px;
+            width: 200px;
+            background-color: white;
+            border: 2px solid black;
+            margin: 20px;
+        }
+
+        .body {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-around;
+            padding: 10px;
+        }
+
+        .blue {
+            background-color: blue;
+            box-shadow: 0px 0px 6px 5px;
+        }
+
+        .orange {
+            background-color: orange;
+            box-shadow: 0px 0px 6px 5px;
+        }
+
+        .yellow {
+            background-color: yellow;
+            box-shadow: 0px 0px 6px 5px;  
+        }
+
+        .pink {
+            background-color: pink;
+            box-shadow: 0px 0px 6px 5px;
+        }
+
+        .red {
+            background-color: red;
+            box-shadow: 0px 0px 6px 5px;
+        }
+    </style>
+</head>
+<body>
+    <div class="body">
+        <div class="card" data-color="blue"></div>
+        <div class="card" data-color="orange"></div>
+        <div class="card" data-color="yellow"></div>
+        <div class="card" data-color="pink"></div>
+        <div class="card" data-color="red"></div>
+    </div>
+</body>
+<script>
+    const allcard = document.querySelectorAll('.card');
+
+    for (let i = 0; i < allcard.length; i++) {
+        allcard[i].addEventListener('dblclick', function (e) {
+            const color = e.target.getAttribute('data-color');
+            e.target.classList.add(color);
+        });
+    }
+</script>
+</html>
