@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+</body>
+<script>
+     class Car{
+        constructor(Carneme,Color,Brand){
+            this.carname=Carneme,
+            this.color=Color,
+            this.brand=Brand
+
+
+        }
+        
+
+     }
+
+     class Elecrtical extends Car{
+        constructor(Carneme,Color,Brand,Charging,Speed){
+            super(Carneme,Color,Brand)
+            this.charging=Charging,
+            this.speed=Speed 
+        }
+     }
+
+     const Car1=new Car('Vinovo','Color','Toyota')
+     const Ecar=new Elecrtical('Tesla','Color','Toyota','4500vh', '500km')
+
+     console.log(Car1)
+     console.log(Ecar)
+</script>
+</html>
